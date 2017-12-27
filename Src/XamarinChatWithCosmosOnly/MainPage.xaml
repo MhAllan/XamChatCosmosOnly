@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinChatWithCosmosOnly"
+			 
+			 xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+			 xmlns:fftrans="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+			 
+             x:Class="XamarinChatWithCosmosOnly.MainPage">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80*" />
+			<RowDefinition Height="10*" />
+			<RowDefinition Height="10*" />
+		</Grid.RowDefinitions>
+
+		<ListView ItemsSource="{Binding Messages}"
+				  HasUnevenRows="True">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+
+						<StackLayout Orientation="Horizontal" 
+									 HorizontalOptions="FillAndExpand"
+									 Padding="10">
+							<ff:CachedImage Source="{Binding UserPicture}"
+											WidthRequest="50"
+											HeightRequest="50"
+											VerticalOptions="Start">
+								<ff:CachedImage.Transformations>
+									<fftrans:CircleTransformation />
+								</ff:CachedImage.Transformations>
+							</ff:CachedImage>
+							<Frame Padding="5"
+								   BackgroundColor="#7f9"
+								   HorizontalOptions="FillAndExpand">
+								<Label Text="{Binding Text}"
+									   HorizontalTextAlignment="Start"
+									   VerticalTextAlignment="Center"/>
+							</Frame>
+						</StackLayout>
+
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		<Editor Text="{Binding MessageToSend}"
+				Grid.Row="1"/>
+
+		<Button Text="Send"
+				Command="{Binding SendMessage}"
+				Grid.Row="2"/>
+
+	</Grid>
+
+</ContentPage>

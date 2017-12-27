@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8D387A7F-C35D-45D8-B5CE-17B905C23C11}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>XamarinChatWithCosmosOnly</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\ISettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\DocumentChangeObserver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\DocumentDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\DocumentDbConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\DocumentId.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\IDocumentDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cosmos\DocumentChangeObserverFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ioc\IocServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ioc\ContainerItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ioc\IContainerItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ioc\IocMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\MockObserverChatClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Startup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DocumentClientConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DocumentObserverChatClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IChatClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
+  </ItemGroup>
+</Project>
