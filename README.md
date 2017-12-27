@@ -3,6 +3,8 @@ Xamarin Cross Platform Realtime Chat Using Azure Cosmos DB Change Feed
 
 * No WebSockets
 * No SignalR
+* No Notifications
+* No Relay Services
 
 ## Benefit
 Creating real time chat application without servers, you still need servers to manager your users and CosmosDB collections. But this way make it easy for you to start. Even SignalR, Notification Hubs, or Azure Relay services are ready for Xamarin, you still need to manage a backend database. Using CosmosDB Changes Feed is an easy possible alternative.
