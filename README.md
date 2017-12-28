@@ -1,5 +1,4 @@
-# XamChatCosmosOnly
-Xamarin Cross Platform Realtime Chat Using Azure Cosmos DB Change Feed
+# Xamarin Cross Platform Realtime Chat Using Azure Cosmos DB Change Feed
 
 * No WebSockets
 * No SignalR
