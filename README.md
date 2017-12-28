@@ -20,7 +20,7 @@ The code in this example is simplified, It creates the Collection and the Lease 
 
 ## Run the app
 * You need CosmosDB account or you install the emulator, the example uses the emulator
-* Run the app, then send a message. A Mocked replay will be returned to the UI, this Mock inserts reply in the database, so when it appears in the UI it is coming from the change feed the same way the DocumentObserverChatClient should work.
+* Run the app, then send a message. A Mocked reply will be returned to the UI, this Mock inserts reply in the database, so when it appears in the UI it is coming from the change feed the same way the DocumentObserverChatClient should work.
 
 
 
